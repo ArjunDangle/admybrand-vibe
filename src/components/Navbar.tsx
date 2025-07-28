@@ -21,16 +21,16 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'navbar-blur' : 'bg-transparent'
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-accent rounded-lg"></div>
-            <span className="text-xl font-bold text-foreground">
-              ADmyBRAND <span className="font-light">AI Suite</span>
+          {/* Logo - CodeArt Style */}
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl"></div>
+            <span className="text-xl font-black tracking-tight text-foreground">
+              ADMYBRAND <span className="text-primary">AI</span>
             </span>
           </div>
 
@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium uppercase tracking-wider text-sm"
               >
                 {item.label}
               </a>
@@ -50,10 +50,10 @@ export const Navbar: React.FC = () => {
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-              Sign In
+              SIGN IN
             </Button>
-            <Button variant="accent" size="sm">
-              Get Started
+            <Button variant="primary" size="sm">
+              GET STARTED
             </Button>
           </div>
         </div>
