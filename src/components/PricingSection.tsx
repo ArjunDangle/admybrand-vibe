@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { PricingCard } from './PricingCard';
 import pricingVisual from '@/assets/pricing-visual.jpg';
 
@@ -83,11 +82,10 @@ export const PricingSection: React.FC = () => {
 
         {/* Visual Feature */}
         <div className="relative h-80 rounded-3xl overflow-hidden fade-in">
-          <Image
+          <img
             src={pricingVisual}
             alt="Pricing analytics visualization"
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
           <div className="absolute inset-0 flex items-center">

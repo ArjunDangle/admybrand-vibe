@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { Button } from './ui/button';
 import heroVisual from '@/assets/hero-3d-visual.jpg';
 
@@ -54,12 +53,10 @@ export const HeroSection: React.FC = () => {
           {/* Hero Visual */}
           <div className="relative lg:h-[600px] fade-in-delay-1">
             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent rounded-3xl"></div>
-            <Image
+            <img
               src={heroVisual}
               alt="AI Marketing Intelligence Visualization"
-              fill
-              className="object-cover rounded-3xl shadow-strong"
-              priority
+              className="w-full h-full object-cover rounded-3xl shadow-strong"
             />
           </div>
         </div>

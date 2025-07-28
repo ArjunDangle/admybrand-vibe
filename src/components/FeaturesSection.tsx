@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { FeatureCard } from './FeatureCard';
 import featuresVisual from '@/assets/features-visual.jpg';
 
@@ -106,11 +105,10 @@ export const FeaturesSection: React.FC = () => {
 
         {/* Visual Section */}
         <div className="relative h-96 rounded-3xl overflow-hidden fade-in">
-          <Image
+          <img
             src={featuresVisual}
             alt="Features visualization"
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent"></div>
           <div className="absolute inset-0 flex items-center justify-center">
