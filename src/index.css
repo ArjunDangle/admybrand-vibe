@@ -8,66 +8,73 @@
 
 @layer base {
   :root {
-    /* Dark premium theme inspired by CodeArt */
-    --background: 218 23% 6%; /* Very dark navy/charcoal #0A0E1A */
-    --foreground: 0 0% 98%; /* Almost white #FAFAFA */
+    /* CodeArt-inspired dark premium theme with 2025 trends */
+    --background: 220 26% 4%; /* Deep dark navy #07090F */
+    --foreground: 0 0% 98%; /* Clean white #FAFAFA */
 
-    /* Card system with subtle transparency */
-    --card: 218 20% 8%; /* Slightly lighter dark #131722 */
+    /* Card system with glass morphism */
+    --card: 220 20% 8%; /* Dark glass #0F1318 */
     --card-foreground: 0 0% 98%;
 
     /* Interactive elements */
-    --popover: 218 20% 8%;
+    --popover: 220 20% 8%;
     --popover-foreground: 0 0% 98%;
 
-    /* Primary - Bright orange/coral accent */
-    --primary: 14 100% 57%; /* Vibrant orange #FF4C1C */
+    /* Primary - CodeArt signature orange */
+    --primary: 20 100% 55%; /* Signature orange #FF6B1A */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 14 100% 70%; /* Lighter orange for glows */
+    --primary-glow: 20 100% 70%; /* Lighter orange for glows */
 
-    /* Accent - Electric blue */
-    --accent: 213 100% 60%; /* Electric blue #0099FF */
+    /* Accent - Modern electric purple */
+    --accent: 258 100% 65%; /* Electric purple #8B5CF6 */
     --accent-foreground: 0 0% 98%;
-    --accent-glow: 213 100% 75%; /* Lighter blue for glows */
+    --accent-glow: 258 100% 80%; /* Lighter purple for glows */
 
     /* Secondary system */
-    --secondary: 218 15% 12%; /* Dark gray #1A1F2E */
+    --secondary: 220 15% 10%; /* Dark charcoal #161A21 */
     --secondary-foreground: 0 0% 98%;
 
     /* Muted elements */
-    --muted: 218 15% 15%; /* Medium dark #242938 */
-    --muted-foreground: 0 0% 65%; /* Medium gray for text #A6A6A6 */
+    --muted: 220 15% 15%; /* Medium dark #1F242D */
+    --muted-foreground: 0 0% 60%; /* Subtle gray #999999 */
 
     /* System colors */
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
     /* Interface elements */
-    --border: 218 15% 20%; /* Subtle border #2F3441 */
-    --input: 218 15% 20%;
-    --ring: 14 100% 57%; /* Orange focus rings */
+    --border: 220 15% 18%; /* Subtle border #252B35 */
+    --input: 220 15% 18%;
+    --ring: 20 100% 55%; /* Orange focus rings */
 
-    /* Border radius system */
-    --radius: 1rem; /* More rounded for modern feel */
+    /* Modern radius system - 2025 trend */
+    --radius: 1.5rem; /* Larger radius for modern feel */
 
-    /* Gradients for premium feel */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--primary) / 0.1));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.5));
+    /* 2025 Gradient system - Mesh gradients and glass morphism */
+    --gradient-hero: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.15), transparent 50%), 
+                     radial-gradient(circle at 0% 100%, hsl(var(--accent) / 0.1), transparent 50%),
+                     linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--card) / 0.8), hsl(var(--muted) / 0.4));
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-text: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.3), transparent),
+                     radial-gradient(ellipse 80% 50% at 80% 50%, hsl(var(--accent) / 0.2), transparent),
+                     radial-gradient(ellipse 80% 50% at 40% 80%, hsl(var(--primary) / 0.1), transparent);
 
-    /* Shadows for depth */
-    --shadow-soft: 0 4px 20px -5px hsl(var(--background) / 0.3);
-    --shadow-medium: 0 10px 40px -10px hsl(var(--background) / 0.4);
-    --shadow-strong: 0 25px 80px -20px hsl(var(--background) / 0.5);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
-    --shadow-accent-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    /* Enhanced shadows with color and depth */
+    --shadow-soft: 0 4px 20px -5px hsl(var(--background) / 0.4);
+    --shadow-medium: 0 10px 40px -10px hsl(var(--background) / 0.6);
+    --shadow-strong: 0 25px 80px -20px hsl(var(--background) / 0.8);
+    --shadow-glow: 0 0 60px hsl(var(--primary) / 0.4);
+    --shadow-accent-glow: 0 0 60px hsl(var(--accent) / 0.4);
+    --shadow-glass: 0 8px 32px hsl(var(--background) / 0.5);
 
-    /* Animation system */
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-quick: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-bounce: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* 2025 Animation system - Fluid and organic */
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-quick: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,110 +107,184 @@
 }
 
 @layer components {
-  /* CodeArt-inspired button variants */
+  /* 2025 UI Trends - Glass morphism button variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-2xl font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-glow hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-primary text-primary-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase tracking-[0.2em] 
+           shadow-glow backdrop-blur-lg border border-primary/20
+           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:shadow-[0_0_80px_hsl(var(--primary)/0.6)] hover:scale-[1.05] hover:brightness-110
+           active:scale-[0.98];
   }
   
   .btn-accent {
-    @apply bg-accent text-accent-foreground px-8 py-4 rounded-2xl font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:shadow-accent-glow hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-accent text-accent-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase tracking-[0.2em]
+           shadow-accent-glow backdrop-blur-lg border border-accent/20
+           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:shadow-[0_0_80px_hsl(var(--accent)/0.6)] hover:scale-[1.05] hover:brightness-110
+           active:scale-[0.98];
   }
   
   .btn-ghost {
-    @apply bg-transparent text-foreground px-8 py-4 rounded-2xl font-medium border border-border transition-all duration-300 hover:bg-muted hover:border-primary/50 hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-card/20 text-foreground px-10 py-5 rounded-3xl font-medium border border-border/50 
+           backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:bg-card/40 hover:border-primary/60 hover:scale-[1.02] hover:shadow-glass
+           active:scale-[0.98];
   }
 
-  /* Dark themed card variants */
-  .card-elegant {
-    @apply bg-card/80 backdrop-blur-xl p-8 rounded-3xl border border-border/50 transition-all duration-500 hover:bg-card hover:border-primary/30 hover:-translate-y-2;
+  /* 2025 Glass morphism card variants */
+  .card-glass {
+    @apply bg-card/30 backdrop-blur-2xl p-10 rounded-[2rem] border border-border/30 
+           shadow-glass transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:bg-card/50 hover:border-primary/40 hover:-translate-y-3 hover:shadow-[0_20px_60px_hsl(var(--background)/0.8)];
   }
   
   .card-feature {
-    @apply bg-card/60 backdrop-blur-lg p-8 rounded-2xl border-0 transition-all duration-500 hover:bg-card/80 hover:-translate-y-1 hover:shadow-glow;
+    @apply bg-card/20 backdrop-blur-xl p-8 rounded-3xl border border-border/20 
+           transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:bg-card/40 hover:border-primary/30 hover:-translate-y-2 hover:shadow-glow;
   }
   
   .card-pricing {
-    @apply bg-card/80 backdrop-blur-xl p-8 rounded-3xl border border-border/50 transition-all duration-500 hover:bg-card hover:border-accent/50 hover:scale-[1.02];
+    @apply bg-card/25 backdrop-blur-2xl p-10 rounded-[2rem] border border-border/30 
+           shadow-glass transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:bg-card/45 hover:border-accent/40 hover:scale-[1.02] hover:shadow-accent-glow;
   }
   
   .card-pricing-popular {
-    @apply bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur-xl p-8 rounded-3xl border-2 border-primary shadow-glow transition-all duration-500 hover:shadow-strong hover:scale-[1.02];
+    @apply bg-gradient-to-br from-primary/15 to-accent/15 backdrop-blur-2xl p-10 rounded-[2rem] 
+           border-2 border-primary/50 shadow-[0_0_60px_hsl(var(--primary)/0.3)]
+           transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+           hover:shadow-[0_0_100px_hsl(var(--primary)/0.5)] hover:scale-[1.03] hover:border-primary/70;
   }
 
-  /* Text styles */
+  /* 2025 Typography trends - Variable fonts and fluid scaling */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent 
+           bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite];
   }
   
   .text-hero {
-    @apply text-6xl lg:text-8xl font-black tracking-tight leading-none;
+    @apply text-7xl lg:text-9xl font-black tracking-[-0.02em] leading-[0.85]
+           [text-wrap:balance] supports-[text-wrap:balance]:text-wrap-balance;
   }
   
   .text-section-title {
-    @apply text-4xl lg:text-6xl font-bold tracking-tight;
+    @apply text-5xl lg:text-7xl font-bold tracking-[-0.01em] leading-[0.9]
+           [text-wrap:balance] supports-[text-wrap:balance]:text-wrap-balance;
   }
 
-  /* Enhanced animations */
+  /* 2025 Mesh gradient backgrounds */
+  .bg-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  /* Enhanced animations with 2025 trends */
   .fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   .fade-in-delay-1 {
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
     opacity: 0;
   }
   
   .fade-in-delay-2 {
-    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
     opacity: 0;
   }
   
   .fade-in-delay-3 {
-    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
     opacity: 0;
   }
 
-  /* CodeArt-style navbar */
+  /* 2025 Floating elements */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-delayed {
+    animation: float 6s ease-in-out infinite 3s;
+  }
+
+  /* Enhanced navbar with glass morphism */
   .navbar-blur {
-    @apply backdrop-blur-2xl bg-background/90 border-b border-border/30;
+    @apply backdrop-blur-3xl bg-background/80 border-b border-border/20 
+           shadow-[0_4px_20px_hsl(var(--background)/0.5)];
   }
 
-  /* Container with max width */
+  /* Container with fluid spacing */
   .container-custom {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-6 lg:px-12 xl:px-16;
   }
 
-  /* Glowing effects */
+  /* 2025 Glow effects with color mixing */
   .glow-primary {
-    box-shadow: 0 0 60px hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 100px hsl(var(--primary) / 0.5);
   }
   
   .glow-accent {
-    box-shadow: 0 0 60px hsl(var(--accent) / 0.4);
+    box-shadow: 0 0 100px hsl(var(--accent) / 0.5);
+  }
+
+  .glow-mixed {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.3), 
+                0 0 120px hsl(var(--accent) / 0.2);
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(60px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
   }
 }
 
