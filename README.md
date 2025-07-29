@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+ ADmyBRAND AI Suite - Modern SaaS Landing Page
 
-## Project info
+This project is a stunning, fully responsive landing page for the "ADmyBRAND AI Suite," a fictional AI-powered marketing intelligence platform. It was created as part of the AI Vibe Coder (Founding Engineer) hiring task for ADmyBRAND.
 
-**URL**: https://lovable.dev/projects/e7f12690-50dd-40ff-9dd8-1ccb94738cc4
+The primary focus of this project was to leverage AI development tools to rapidly build a visually beautiful, modern, and high-converting user interface, backed by a clean and reusable component architecture.
 
-## How can I edit this code?
+**Live Demo URL:** [**https://admybrandtask.vercel.app/**](https://admybrandtask.vercel.app/)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Features Implemented
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e7f12690-50dd-40ff-9dd8-1ccb94738cc4) and start prompting.
+This landing page is composed of several key sections, each designed to be informative and visually engaging.
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Navbar**: A sleek, semi-transparent navigation bar that becomes opaque on scroll. Includes navigation links and primary/secondary call-to-action buttons.
+* **Hero Section**: A powerful, above-the-fold section with a compelling headline, a clear value proposition, animated statistics, and a visually striking hero image.
+* **Features Section**: A detailed breakdown of six core product features, each presented in a clean card format with custom icons and descriptions. Includes a visual element to showcase the product in action.
+* **Pricing Section**: A clear and transparent pricing table with three distinct tiers (Starter, Professional, Enterprise). The "Most Popular" plan is highlighted to guide user choice.
+* **Testimonials Section**: A trust-building section featuring a carousel of customer testimonials, complete with names, titles, and star ratings.
+* **FAQ Section**: An accordion-style Frequently Asked Questions section to proactively address common user queries and reduce friction.
+* **Footer**: A comprehensive footer with organized links, a newsletter signup form, and social media connections.
+* **Responsive Design**: The entire application is meticulously designed to be fully responsive, providing a seamless experience on desktop, tablet, and mobile devices.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Design & UI/UX Philosophy
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The design of this landing page was heavily weighted in the evaluation, and the following principles were applied to create a premium user experience:
 
-Follow these steps:
+* **Modern Aesthetics**: The UI incorporates modern design trends, including a clean layout, soft shadows for depth, and a refined color palette to convey professionalism and trust.
+* **Visual Hierarchy**: A clear and intuitive visual hierarchy guides the user's attention through the page, with distinct styles for headings, body text, and interactive elements.
+* **Smooth Animations & Micro-interactions**: Subtle animations are used throughout the page to enhance the user experience. This includes fade-in-on-scroll effects, hover states on buttons and cards, and smooth transitions for the accordion and carousel.
+* **Component-Driven Design**: The entire UI is built on a robust system of reusable components (Buttons, Cards, Modals, etc.), ensuring consistency and maintainability. This is powered by **shadcn/ui** and custom-styled components.
+* **Typography**: The font `Manrope` was chosen for its modern and highly readable characteristics, with a consistent type scale applied across the site.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+This project was built using a modern, performance-oriented technology stack:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+* **Framework**: [Vite](https://vitejs.dev/)
+* **Library**: [React](https://reactjs.org/)
+* **Language**: [TypeScript](https://www.typescriptlang.org/)
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+* **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+* **Deployment**: [Vercel](https://vercel.com/)
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Local Development Setup
 
-**Use GitHub Codespaces**
+To run this project on your local machine, please follow these steps.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Prerequisites
 
-## What technologies are used for this project?
+* Node.js (v18 or later)
+* npm or yarn
 
-This project is built with:
+### Installation & Setup
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/ArjunDangle/admybrand-vibe.git](https://github.com/ArjunDangle/admybrand-vibe.git)
+    ```
 
-## How can I deploy this project?
+2.  **Navigate to the project directory:**
+    ```sh
+    cd admybrand-vibe
+    ```
 
-Simply open [Lovable](https://lovable.dev/projects/e7f12690-50dd-40ff-9dd8-1ccb94738cc4) and click on Share -> Publish.
+3.  **Install the necessary dependencies:**
+    ```sh
+    npm install
+    ```
 
-## Can I connect a custom domain to my Lovable project?
+4.  **Start the development server:**
+    ```sh
+    npm run dev
+    ```
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Once the server is running, you can view the application by opening [http://localhost:8080](http://localhost:8080) in your browser.
