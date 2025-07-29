@@ -109,71 +109,101 @@
 @layer components {
   /* 2025 UI Trends - Glass morphism button variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase tracking-[0.2em] 
+    @apply bg-primary text-primary-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase 
            shadow-glow backdrop-blur-lg border border-primary/20
-           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-           hover:shadow-[0_0_80px_hsl(var(--primary)/0.6)] hover:scale-[1.05] hover:brightness-110
-           active:scale-[0.98];
+           hover:brightness-110 active:scale-95;
+    letter-spacing: 0.2em;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
+  }
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px hsl(var(--primary) / 0.6);
   }
   
   .btn-accent {
-    @apply bg-accent text-accent-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase tracking-[0.2em]
+    @apply bg-accent text-accent-foreground px-10 py-5 rounded-3xl font-bold text-sm uppercase
            shadow-accent-glow backdrop-blur-lg border border-accent/20
-           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-           hover:shadow-[0_0_80px_hsl(var(--accent)/0.6)] hover:scale-[1.05] hover:brightness-110
-           active:scale-[0.98];
+           hover:brightness-110 active:scale-95;
+    letter-spacing: 0.2em;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
+  }
+  .btn-accent:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px hsl(var(--accent) / 0.6);
   }
   
   .btn-ghost {
     @apply bg-card/20 text-foreground px-10 py-5 rounded-3xl font-medium border border-border/50 
-           backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-           hover:bg-card/40 hover:border-primary/60 hover:scale-[1.02] 
-           active:scale-[0.98];
+           backdrop-blur-xl hover:bg-card/40 hover:border-primary/60 active:scale-95;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
     box-shadow: var(--shadow-glass);
+  }
+  .btn-ghost:hover {
+    transform: scale(1.02);
   }
 
   /* 2025 Glass morphism card variants */
   .card-glass {
-    @apply bg-card/30 backdrop-blur-2xl p-10 rounded-[2rem] border border-border/30 
-           transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
+    @apply bg-card/30 backdrop-blur-2xl p-10 border border-border/30 
            hover:bg-card/50 hover:border-primary/40 hover:-translate-y-3;
+    border-radius: 2rem;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: var(--shadow-glass);
   }
   
   .card-feature {
     @apply bg-card/20 backdrop-blur-xl p-8 rounded-3xl border border-border/20 
-           transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]
            hover:bg-card/40 hover:border-primary/30 hover:-translate-y-2 hover:shadow-glow;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .card-pricing {
-    @apply bg-card/25 backdrop-blur-2xl p-10 rounded-[2rem] border border-border/30 
-           transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
-           hover:bg-card/45 hover:border-accent/40 hover:scale-[1.02] hover:shadow-accent-glow;
+    @apply bg-card/25 backdrop-blur-2xl p-10 border border-border/30 
+           hover:bg-card/45 hover:border-accent/40 hover:shadow-accent-glow;
+    border-radius: 2rem;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
     box-shadow: var(--shadow-glass);
+  }
+  .card-pricing:hover {
+    transform: scale(1.02);
   }
   
   .card-pricing-popular {
-    @apply bg-gradient-to-br from-primary/15 to-accent/15 backdrop-blur-2xl p-10 rounded-[2rem] 
-           border-2 border-primary/50 shadow-[0_0_60px_hsl(var(--primary)/0.3)]
-           transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
-           hover:shadow-[0_0_100px_hsl(var(--primary)/0.5)] hover:scale-[1.03] hover:border-primary/70;
+    @apply bg-gradient-to-br from-primary/15 to-accent/15 backdrop-blur-2xl p-10 
+           border-2 border-primary/50 hover:border-primary/70;
+    border-radius: 2rem;
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.3);
+    transform-origin: center;
+  }
+  .card-pricing-popular:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 100px hsl(var(--primary) / 0.5);
   }
 
   /* 2025 Typography trends - Variable fonts and fluid scaling */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent 
-           bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite];
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% 100%;
+    animation: gradient 3s ease-in-out infinite;
   }
   
   .text-hero {
-    @apply text-7xl lg:text-9xl font-black tracking-[-0.02em] leading-[0.85]
-           [text-wrap:balance] supports-[text-wrap:balance]:text-wrap-balance;
+    @apply text-7xl lg:text-9xl font-black leading-tight;
+    letter-spacing: -0.02em;
+    line-height: 0.85;
+    text-wrap: balance;
   }
   
   .text-section-title {
-    @apply text-5xl lg:text-7xl font-bold tracking-[-0.01em] leading-[0.9]
-           [text-wrap:balance] supports-[text-wrap:balance]:text-wrap-balance;
+    @apply text-5xl lg:text-7xl font-bold leading-tight;
+    letter-spacing: -0.01em;
+    line-height: 0.9;
+    text-wrap: balance;
   }
 
   /* 2025 Mesh gradient backgrounds */
@@ -216,8 +246,8 @@
 
   /* Enhanced navbar with glass morphism */
   .navbar-blur {
-    @apply backdrop-blur-3xl bg-background/80 border-b border-border/20 
-           shadow-[0_4px_20px_hsl(var(--background)/0.5)];
+    @apply backdrop-blur-3xl bg-background/80 border-b border-border/20;
+    box-shadow: 0 4px 20px hsl(var(--background) / 0.5);
   }
 
   /* Container with fluid spacing */
