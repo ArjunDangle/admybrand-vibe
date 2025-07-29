@@ -9,22 +9,22 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl font-semibold",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-2xl",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-xl",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-2xl",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-xl",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-2xl",
-        ghost: "bg-transparent text-foreground border border-border hover:bg-muted hover:border-primary/50 hover:scale-[1.02] active:scale-[0.98] rounded-2xl",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-xl",
+        ghost: "bg-transparent text-foreground border border-border hover:bg-muted hover:scale-[1.02] active:scale-[0.98] rounded-xl",
         link: "text-primary underline-offset-4 hover:underline",
-        primary: "bg-primary text-primary-foreground hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] rounded-2xl font-semibold text-sm uppercase tracking-wider",
-        accent: "bg-accent text-accent-foreground hover:shadow-accent-glow hover:scale-[1.02] active:scale-[0.98] rounded-2xl font-semibold text-sm uppercase tracking-wider",
+        primary: "bg-primary text-primary-foreground hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] rounded-xl",
+        accent: "bg-accent text-accent-foreground hover:shadow-accent hover:scale-[1.02] active:scale-[0.98] rounded-xl",
       },
       size: {
         default: "h-12 px-6 py-3 text-base",
         sm: "h-10 px-4 py-2 text-sm",
-        lg: "h-16 px-10 py-5 text-lg",
+        lg: "h-14 px-8 py-4 text-lg",
         icon: "h-10 w-10",
       },
     },

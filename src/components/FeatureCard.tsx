@@ -14,13 +14,16 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   delay = 0,
 }) => {
   return (
-    <div className="card-codeart group cursor-pointer">
-      <div className="space-y-6">
-        <div className="w-12 h-12 flex items-center justify-center text-foreground group-hover:text-primary transition-colors duration-300">
+    <div 
+      className={`card-feature fade-in-delay-${delay}`}
+      style={{ animationDelay: `${delay * 0.1}s` }}
+    >
+      <div className="space-y-4">
+        <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
           {icon}
         </div>
-        <h3 className="text-mono-heading text-lg">{title}</h3>
-        <p className="text-muted-foreground leading-relaxed text-sm font-light">{description}</p>
+        <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
       </div>
     </div>
   );

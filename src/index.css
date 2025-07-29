@@ -1,57 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* CodeArt Exact Replication - Pure Black & White */
+/* ADmyBRAND AI Suite Design System - Elegant & Minimalist */
 
 @layer base {
   :root {
-    /* CodeArt exact color system */
-    --background: 0 0% 0%; /* Pure black #000000 */
-    --foreground: 0 0% 100%; /* Pure white #FFFFFF */
+    /* Base colors - Light and airy theme */
+    --background: 32 100% 97.5%; /* Soft off-white #F8F8F8 */
+    --foreground: 0 0% 11.8%; /* Dark charcoal #1E1E1E */
 
-    /* Card system - minimal borders */
-    --card: 0 0% 0%; /* Pure black background */
-    --card-foreground: 0 0% 100%;
+    /* Card system */
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 0 0% 11.8%;
 
     /* Interactive elements */
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11.8%;
 
-    /* Primary - CodeArt purple accent */
-    --primary: 258 100% 60%; /* Electric purple #9333EA */
-    --primary-foreground: 0 0% 100%;
+    /* Brand colors */
+    --primary: 0 0% 11.8%; /* Dark charcoal for primary actions */
+    --primary-foreground: 0 0% 98%;
 
-    /* Accent - Same purple for consistency */
-    --accent: 258 100% 60%; /* Electric purple */
-    --accent-foreground: 0 0% 100%;
+    /* Accent color - Warm muted terracotta */
+    --accent: 15 45% 65%; /* Desaturated terracotta #C4A484 */
+    --accent-foreground: 0 0% 11.8%;
+    --accent-glow: 15 45% 85%; /* Lighter version for glows */
 
     /* Secondary system */
-    --secondary: 0 0% 10%; /* Very dark gray */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%; /* Very light gray */
+    --secondary-foreground: 0 0% 11.8%;
 
     /* Muted elements */
-    --muted: 0 0% 20%; /* Dark gray */
-    --muted-foreground: 0 0% 70%; /* Light gray */
+    --muted: 0 0% 94%; /* Light gray for backgrounds */
+    --muted-foreground: 0 0% 45%; /* Medium gray for subtle text */
 
     /* System colors */
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    /* Interface elements - white borders */
-    --border: 0 0% 100%; /* Pure white borders */
-    --input: 0 0% 10%;
-    --ring: 258 100% 60%; /* Purple focus rings */
+    /* Interface elements */
+    --border: 0 0% 89%; /* Soft border color */
+    --input: 0 0% 89%;
+    --ring: 15 45% 65%; /* Accent color for focus rings */
 
-    /* Minimal radius - CodeArt style */
-    --radius: 0rem; /* Sharp corners like CodeArt */
+    /* Border radius system */
+    --radius: 0.75rem; /* Slightly more rounded for elegance */
 
-    /* Spotlight effect variables */
-    --spotlight-size: 600px;
-    --spotlight-opacity: 0.15;
+    /* Gradients for premium feel */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--accent-glow) / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted) / 0.5));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 20px -5px hsl(var(--foreground) / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(var(--foreground) / 0.12);
+    --shadow-strong: 0 20px 60px -15px hsl(var(--foreground) / 0.15);
+    --shadow-accent: 0 8px 25px -8px hsl(var(--accent) / 0.25);
+
+    /* Animation system */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-quick: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -70,7 +82,43 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Remove old dark theme overrides - using dark theme by default now */
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
@@ -79,256 +127,98 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
-    cursor: none; /* Hide default cursor for custom spotlight */
-  }
-
-  /* Custom cursor */
-  .custom-cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 1px solid white;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
+    @apply bg-background text-foreground font-manrope antialiased;
   }
 }
 
 @layer components {
-  /* CodeArt exact replication - minimal components */
-  
-  /* Mouse Spotlight Effect - MANDATORY */
-  .spotlight {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 1;
-    background: radial-gradient(
-      circle var(--spotlight-size) at var(--mouse-x, 50%) var(--mouse-y, 50%),
-      transparent 0%,
-      transparent 40%,
-      rgba(0, 0, 0, var(--spotlight-opacity)) 100%
-    );
-  }
-
-  /* Grid System - Visible 1px borders */
-  .grid-section {
-    border: 1px solid white;
-    position: relative;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1px;
-    border: 1px solid white;
-  }
-
-  .grid-item {
-    border: 1px solid white;
-    padding: 2rem;
-  }
-
-  /* CodeArt Button Styles */
-  .btn-codeart {
-    background: hsl(var(--primary));
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border-radius: 50px;
+  /* Elegant button variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
   }
   
-  .btn-codeart:hover {
-    background: hsl(var(--primary) / 0.8);
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: white;
-    padding: 1rem 2rem;
-    border: 1px solid white;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  .btn-accent {
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-accent hover:scale-[1.02] active:scale-[0.98];
   }
   
-  .btn-outline:hover {
-    background: white;
-    color: black;
+  .btn-ghost {
+    @apply bg-transparent text-foreground px-8 py-4 rounded-xl font-medium border border-border transition-all duration-300 hover:bg-muted hover:scale-[1.02] active:scale-[0.98];
   }
 
-  /* CodeArt Card Styles */
-  .card-codeart {
-    border: 1px solid white;
-    padding: 2rem;
-    background: transparent;
-    transition: all 0.3s ease;
+  /* Card variants with elegant shadows */
+  .card-elegant {
+    @apply bg-card p-8 rounded-2xl border border-border/50 transition-all duration-300 hover:shadow-medium hover:-translate-y-1;
   }
   
-  .card-codeart:hover {
-    border-color: hsl(var(--primary));
-    background: hsl(var(--primary) / 0.05);
-  }
-
-  /* CodeArt Typography */
-  .text-hero-codeart {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    line-height: 0.9;
-    color: white;
+  .card-feature {
+    @apply bg-card p-6 rounded-xl border-0 shadow-soft transition-all duration-300 hover:shadow-medium hover:-translate-y-1;
   }
   
-  .text-mono-heading {
-    font-family: 'IBM Plex Mono', monospace;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-  }
-
-  /* Grid Lines - Brutalist Structure */
-  .brutalist-grid {
-    position: relative;
+  .card-pricing {
+    @apply bg-card p-8 rounded-2xl border border-border/50 transition-all duration-300 hover:shadow-medium hover:scale-[1.02];
   }
   
-  .brutalist-grid::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      linear-gradient(to right, white 1px, transparent 1px),
-      linear-gradient(to bottom, white 1px, transparent 1px);
-    background-size: 100px 100px;
-    opacity: 0.1;
-    pointer-events: none;
+  .card-pricing-popular {
+    @apply bg-card p-8 rounded-2xl border-2 border-accent shadow-accent transition-all duration-300 hover:shadow-strong hover:scale-[1.02];
   }
 
-  /* 2025 Mesh gradient backgrounds */
-  .bg-mesh {
-    background: var(--gradient-mesh);
+  /* Text animations */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent;
   }
-
-  /* Enhanced animations with 2025 trends */
+  
+  /* Smooth fade-in animation */
   .fade-in {
-    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeIn 0.6s ease-out forwards;
   }
   
   .fade-in-up {
-    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInUp 0.6s ease-out forwards;
   }
   
   .fade-in-delay-1 {
-    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    animation: fadeInUp 0.6s ease-out 0.1s forwards;
     opacity: 0;
   }
   
   .fade-in-delay-2 {
-    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+    animation: fadeInUp 0.6s ease-out 0.2s forwards;
     opacity: 0;
   }
   
   .fade-in-delay-3 {
-    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+    animation: fadeInUp 0.6s ease-out 0.3s forwards;
     opacity: 0;
   }
 
-  /* 2025 Floating elements */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .float-delayed {
-    animation: float 6s ease-in-out infinite 3s;
-  }
-
-  /* Enhanced navbar with glass morphism */
+  /* Navbar blur effect */
   .navbar-blur {
-    @apply backdrop-blur-3xl bg-background/80 border-b border-border/20;
-    box-shadow: 0 4px 20px hsl(var(--background) / 0.5);
+    @apply backdrop-blur-xl bg-background/80 border-b border-border/50;
   }
 
-  /* Container with fluid spacing */
+  /* Container with max width */
   .container-custom {
-    @apply mx-auto max-w-7xl px-6 lg:px-12 xl:px-16;
-  }
-
-  /* 2025 Glow effects with color mixing */
-  .glow-primary {
-    box-shadow: 0 0 100px hsl(var(--primary) / 0.5);
-  }
-  
-  .glow-accent {
-    box-shadow: 0 0 100px hsl(var(--accent) / 0.5);
-  }
-
-  .glow-mixed {
-    box-shadow: 0 0 60px hsl(var(--primary) / 0.3), 
-                0 0 120px hsl(var(--accent) / 0.2);
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(60px) scale(0.95);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 0.8;
-    filter: brightness(1.2);
+    transform: translateY(0);
   }
 }
 

@@ -74,28 +74,24 @@ const features = [
 
 export const FeaturesSection: React.FC = () => {
   return (
-    <section id="features" className="py-32 relative">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="container-custom relative z-10">
-        {/* Header - CodeArt Style */}
-        <div className="text-center space-y-8 mb-24 fade-in">
-          <h2 className="text-section-title">
-            <span className="block">POWERFUL</span>
-            <span className="block text-gradient">FEATURES</span>
+    <section id="features" className="py-24 bg-muted/30">
+      <div className="container-custom">
+        {/* Header */}
+        <div className="text-center space-y-6 mb-20 fade-in">
+          <h2 className="text-4xl lg:text-5xl font-light text-foreground">
+            Powerful Features for
+            <span className="block text-gradient font-medium">
+              Modern Marketing
+            </span>
           </h2>
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Everything you need to transform your marketing strategy and drive meaningful results 
             with cutting-edge AI technology.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.title}
@@ -108,17 +104,17 @@ export const FeaturesSection: React.FC = () => {
         </div>
 
         {/* Visual Section */}
-        <div className="relative h-[500px] rounded-3xl overflow-hidden fade-in">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30"></div>
+        <div className="relative h-96 rounded-3xl overflow-hidden fade-in">
           <img
             src={featuresVisual}
             alt="Features visualization"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent"></div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white space-y-6">
-              <h3 className="text-4xl lg:text-5xl font-black tracking-tight">SEE IT IN ACTION</h3>
-              <p className="text-xl opacity-90 font-light max-w-lg">Experience the power of AI-driven marketing intelligence</p>
+            <div className="text-center text-white space-y-4">
+              <h3 className="text-3xl font-semibold">See It In Action</h3>
+              <p className="text-lg opacity-90">Experience the power of AI-driven marketing intelligence</p>
             </div>
           </div>
         </div>
