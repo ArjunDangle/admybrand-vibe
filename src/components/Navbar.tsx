@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './ui/button';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -14,48 +13,40 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Services', href: '#services' },
+    { label: 'Work', href: '#work' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'navbar-blur' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-background/80 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'
     }`}>
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - CodeArt Style */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl"></div>
-            <span className="text-xl font-black tracking-tight text-foreground">
-              ADMYBRAND <span className="text-primary">AI</span>
-            </span>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium uppercase tracking-wider text-sm"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-              SIGN IN
-            </Button>
-            <Button variant="primary" size="sm">
-              GET STARTED
-            </Button>
-          </div>
+      <div className="container mx-auto px-6 flex items-center justify-between py-6">
+        {/* Logo - CodeArt style */}
+        <div className="text-xl font-light text-foreground">
+          ADmy<span className="text-primary">BRAND</span>
+        </div>
+        
+        {/* Navigation Links - CodeArt minimal */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-foreground hover:text-primary transition-colors duration-300 font-light text-sm"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+        
+        {/* Action Button - CodeArt style */}
+        <div className="flex items-center">
+          <button className="btn-outline text-sm px-6 py-2">
+            Contact
+          </button>
         </div>
       </div>
     </nav>
